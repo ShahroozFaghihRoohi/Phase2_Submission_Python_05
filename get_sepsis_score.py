@@ -61,6 +61,6 @@ def get_sepsis_score(data, model, cols, Dmean, Dstd):
 def load_sepsis_model():
     ModelFileName = 'ChainCRF_Model.pkl'
     with open(ModelFileName, 'rb') as file:
-        ssvm, cols, Dmean, Dstd = pickle.load(file)
+        ssvm, cols, Dmean, Dstd = pickle.load(file, encoding='latin1')
 
     return ssvm, cols, Dmean, Dstd 
